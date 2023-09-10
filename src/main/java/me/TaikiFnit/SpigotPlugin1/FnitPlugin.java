@@ -1,5 +1,6 @@
 package me.TaikiFnit.SpigotPlugin1;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class FnitPlugin extends JavaPlugin {
@@ -9,6 +10,7 @@ public class FnitPlugin extends JavaPlugin {
         this.getCommand("fnit").setExecutor(new CommandKit());
 
         getServer().getPluginManager().registerEvents(new FnitListener(), this);
+
     }
 
     @Override

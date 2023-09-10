@@ -1,5 +1,6 @@
 package me.TaikiFnit.SpigotPlugin1;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,6 +16,10 @@ public class CommandKit implements CommandExecutor {
             ItemStack diamond = new ItemStack(Material.DIAMOND);
 
             player.getInventory().addItem(diamond);
+
+            FnitEvent fnitEvent = new FnitEvent(player.getName());
+            Bukkit.getPluginManager().callEvent(fnitEvent);
+            player.sendMessage(fnitEvent.getPlayerName());
         }
 
         return true;
