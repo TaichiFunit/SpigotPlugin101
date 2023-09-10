@@ -7,6 +7,8 @@ public class FnitPlugin extends JavaPlugin {
     public void onEnable() {
         getLogger().info("久しぶりのSpigot Plugin Development!");
         this.getCommand("fnit").setExecutor(new CommandKit());
+
+        getServer().getPluginManager().registerEvents(new FnitListener(), this);
     }
 
     @Override
