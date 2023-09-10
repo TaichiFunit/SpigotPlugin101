@@ -1,0 +1,7 @@
+name: FnitPlugin
+version: 1.0.0
+main: me.TaikiFnit.SpigotPlugin1.FnitPlugin
+commands:
+  fnit:
+    description: FnitCatCommand
+    usage: /<command>
